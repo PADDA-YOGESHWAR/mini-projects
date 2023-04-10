@@ -1,0 +1,131 @@
+.switch {
+    margin: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: fixed;
+  }
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    border-radius: 30px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  input:checked + .slider {
+    background-color: #2c55db;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #root {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    
+  }
+  
+  .dusk {
+    background: radial-gradient(orange, #1f3c9b, #0e183d, #171e36);
+    background-size: 200% 250%;background-position:  0% -100px;background-repeat: no-repeat;
+    opacity: 1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: sunset 3s ease-in 1; 
+    animation-fill-mode: forwards;
+  }
+  
+  .dawn {
+    background: radial-gradient(#efb456 5%, 15%, #2c55db 50%, #3c4e8c, #2b3866); background-size: 200% 250%;background-position:  0% -100px;background-repeat: no-repeat;
+    opacity: 1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    animation: sunrise 3s ease-in 1; 
+    animation-fill-mode: forwards;
+  }
+  
+  .waiting {
+    background: radial-gradient(#efb456 3%, 8%, #7daaf2 30%, #6787fc, #5076fc);background-size: 200% 250%; background-position:40% 100%; background-repeat: no-repeat;opacity: 0.8;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation-fill-mode: forwards;
+  } 
+  
+  @keyframes sunrise {
+    
+    0%{background: radial-gradient(#efb456 5%, 15%, #2c55db 50%, #3c4e8c, #2b3866); background-size: 200% 250%;background-position: 0% -100px;background-repeat: no-repeat; opacity: 1}
+    
+    
+   25%{background: radial-gradient(#efb456 5%, 15%, #365ddb 50%, #253463, #35457f); background-size: 200% 250%;background-position: 10% 25%;background-repeat: no-repeat; opacity: 0.9}
+    
+    50%{background: radial-gradient(#efb456 5%, 15%,  #8db0e8 30%, #4e68c4, #3b53aa); background-position:20% 50%; background-size: 200% 250%;background-repeat: no-repeat; opacity: 0.9} 
+    
+    75%{ background: radial-gradient(#efb456 5%, 15%, #8db0e8 30%, #4e70ed, #4369f2);background-size: 200% 250%; background-position:30% 75%; background-repeat: no-repeat;opacity: 0.9;
+    }
+    
+    95%{ background: radial-gradient(#efb456 5%, 15%, #7daaf2 30%, #6787fc, #5076fc);background-size: 200% 250%; background-position:40% 96%; background-repeat: no-repeat;opacity: 0.8;
+    }
+    100%{ background: radial-gradient(#efb456 3%, 8%, #7daaf2 30%, #6787fc, #5076fc);background-size: 200% 250%; background-position:40% 100%; background-repeat: no-repeat;opacity: 0.8;
+  }
+  }
+  
+   @keyframes sunset {
+    0%{ background: radial-gradient(#efb456 5%, 10%, #7daaf2 30%, #6787fc, #5076fc);background-size: 200% 250%;background-position:40% 100%;  background-repeat: no-repeat;opacity: 0.8;}
+     25%{
+        background: radial-gradient(#ed9f23, #4668d6, #171e36, #253056);background-size: 200% 250%;background-position:55% 75%;  background-repeat: no-repeat;opacity: 0.8;
+       
+     }
+     
+      50%{background: radial-gradient(#ed9c1a, #2c55db, #111628, #141b30);background-size: 200% 250%; opacity: 0.85;background-position:70% 50%; opacity: 0.9;}
+     
+     75%{background-position: 85% 25%; opacity: 0.95;}
+     
+      100%{background-position:100% 0%; opacity: 1;} 
+  }
