@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Questrial", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+  }
+  h1 {
+    font-family: "Gloria Hallelujah", cursive;
+    text-transform: uppercase;
+  }
+  
+  svg {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    min-height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20%;
+    overflow: hidden;
+    border: 10px solid #7f8c8d;
+    background: #7f8c8d;
+  }
+  
+  .foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #rain-clouds {
+    opacity: 0;
+  }
+  
+  #sun {
+    opacity: 0;
+  }
+  
+  #cloud-1,
+  #cloud-2 {
+    opacity: 0;
+    // transform: translateX(-10px);
+  }
+  
+  #cloud-1 {
+    transform: translate(-70px, 52px);
+  }
+  #cloud-2 {
+    transform: translate(36px, -19px);
+  }
+  
+  #river {
+  }
+  
+  .info-block {
+    position: absolute;
+    width: 300px;
+    background: white;
+    padding: 0.5em 1em;
+    border-top: 6px solid;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      0 100px 80px rgba(0, 0, 0, 0.07);
+  
+    h2 {
+      margin: 0 0 0.25em 0;
+      padding: 0;
+    }
+    p {
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  
+  .evaporation {
+    top: 5%;
+    left: 30%;
+    transform: translateY(10px);
+    border-color: #e67e22;
+    opacity: 0;
+  }
+  
+  .condensation {
+    top: 50%;
+    left: 20%;
+    transform: translate(0, -10px);
+    border-color: #3498db;
+    opacity: 0;
+  }
+  
+  .precipitation {
+    top: 60%;
+    left: 50%;
+    transform: translate(-10px, -10px);
+    border-color: #34495e;
+    opacity: 0;
+  }
+  
+  .runoff {
+    top: 10%;
+    left: 50%;
+    transform: translateY(10px);
+    border-color: #16a085;
+    opacity: 0;
+  }
+  
+  button {
+    margin-top: 1em;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  button > svg {
+    color: #333;
+    height: 5em;
+  }
+  
